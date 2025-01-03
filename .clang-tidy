@@ -19,6 +19,16 @@ HeaderFilterRegex: ''
 FormatStyle:     none
 
 CheckOptions:
+  # 普通函数使用 camelBack
+  - key: readability-identifier-naming.FunctionCase
+    value: CamelCase
+  # 类方法（包括静态和非静态成员函数）使用 PascalCase
+  - key: readability-identifier-naming.ClassMethodCase
+    value: CamelCase
+  # 非静态成员函数使用 camelBack
+  - key: readability-identifier-naming.MethodCase
+    value: camelBack
+  # 私有成员变量使用 _ 结尾
   - key: readability-identifier-length.MinimumVariableNameLength
     value: 2
   - key: readability-identifier-length.MinimumParameterNameLength

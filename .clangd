@@ -1,0 +1,41 @@
+CompileFlags:
+  Add: [
+    -std=c++17,
+    --cuda-path=/usr/local/cuda-12.8,
+    -L/usr/local/cuda-12.8/lib64,
+    -I/usr/local/cuda-12.8include,
+  ]
+  Remove: [
+    -Xcudafe,
+    -Xcudafe=*,
+    --compress-all,
+    -compress-all,
+    --gencode,
+    -gencode,
+    -forward-unknown-to-host-compiler,
+    -Xfatbin,
+    -Xcompiler=*,
+    --expt-extended-lambda,
+    --expt-relaxed-constexpr,
+    --diag_suppress=*,
+    -Xcudafe--diag_suppress=field_without_dll_interface,
+    -Xcudafe--diag_suppress=base_class_has_different_dll_interface,
+    -Xcudafe--diag_suppress=dll_interface_conflict_none_assumed,
+    -Xcudafe--diag_suppress=dll_interface_conflict_dllexport_assumed,
+    -Xcudafe--diag_suppress=bad_friend_decl
+  ]
+  # Remove: [
+  #   -compress-all,
+  #   -gencode,
+  #   -forward-unknown-to-host-compiler,
+  #   -Xfatbin,
+  #   -Xcompiler=-fPI,
+  #   --expt-extended-lambda,
+  #   --expt-relaxed-constexpr,
+  #   --diag_suppress=cc_clobber_ignored,
+  #   --diag_suppress=field_without_dll_interface,
+  #   --diag_suppress=base_class_has_different_dll_interface,
+  #   --diag_suppress=dll_interface_conflict_none_assumed,
+  #   --diag_suppress=dll_interface_conflict_dllexport_assumed,
+  #   --diag_suppress=bad_friend_decl
+  # ] 
